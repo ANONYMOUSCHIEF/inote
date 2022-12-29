@@ -8,6 +8,7 @@ import {BrowserRouter as Router,Route,Routes}  from 'react-router-dom';
 import Alert from './components/Alert';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+import Details from './components/Details';
 function App() {
   return (
     <>
@@ -21,6 +22,7 @@ function App() {
       <Route exact path='/about' element={<About/>}></Route>
       <Route exact path='/login' element={<Login/>}></Route>
       <Route exact path='/signup' element={<SignUp/>}></Route>
+      <Route exact path='/Details' element={<Details/>}></Route>
       </Routes>
       </NoteState>
     </Router>

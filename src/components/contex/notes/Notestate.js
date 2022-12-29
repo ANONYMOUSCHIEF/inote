@@ -83,7 +83,6 @@ const NoteState = (props) => {
     const newNotes=note.filter((note)=>{return note._id!==id})
     setNote(newNotes);
   }
-  // create new Account / sign up
  
 
   return (

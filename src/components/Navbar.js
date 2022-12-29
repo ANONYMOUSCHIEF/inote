@@ -12,6 +12,12 @@ function Navbar() {
     showAlert("success","You have logout successfully")
     location('/login')
   }
+  const handlefetchdetails=()=>{
+    location('/Details')
+  }
+  const handleClose=()=>{
+    location('/')
+  }
   return (
     <div>
       <nav className={`navbar navbar-expand-lg bg-dark navbar-dark`}>
@@ -32,9 +38,9 @@ function Navbar() {
             </div>
           {!localStorage.getItem("token")?
           <div>
-          <Link to="/login" className="btn btn-primary btn-lg mx-2" role="button" aria-disabled="true">Login</Link>
-          <Link to="/signup" className="btn btn-primary btn-lg" role="button" aria-disabled="true">Sign Up</Link>
-          </div>:<div><Link to="/login" className="btn btn-primary btn-lg " role="button" aria-disabled="true" onClick={handleLogOut}>Logout</Link></div>}
+          <Link to="/login" className="btn btn-primary btn-sm mx-2" role="button" aria-disabled="true">Login</Link>
+          <Link to="/signup" className="btn btn-primary btn-sm" role="button" aria-disabled="true">Sign Up</Link>
+          </div>:<div><Link to="/Details" className="btn btn-primary btn-sm mx-2 " role="button" aria-disabled="true" onClick={handlefetchdetails} onDoubleClick={handleClose}>Details</Link><Link to="/login" className="btn btn-primary btn-sm " role="button" aria-disabled="true" onClick={handleLogOut} >Logout</Link></div>}
         </div>
       </nav>
     </div>
